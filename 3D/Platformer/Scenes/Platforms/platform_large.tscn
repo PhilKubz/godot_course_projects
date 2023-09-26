@@ -13,5 +13,5 @@ mesh = ExtResource("1_yakwh")
 skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.971483, 0, 0, 0, 1.00612, 0, 0, 0, 2.01163, -0.0132282, 0.494861, 0)
+transform = Transform3D(0.971483, 0, 0, 0, 1.00612, 0, 0, 0, 2.01163, -0.0132282, 0.486979, 0)
 shape = SubResource("BoxShape3D_ueqfc")

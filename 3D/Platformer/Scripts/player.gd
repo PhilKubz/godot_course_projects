@@ -1,12 +1,14 @@
 extends CharacterBody3D
 
 @onready var model : MeshInstance3D = get_node("Model")
+@onready var score_text : Label = get_node("ScoreText")
 
 @export var move_speed : float = 4.0
 @export var jump_force : float = 8.0
 @export var gravity : float = 20.0
 
 var facing_angle : float
+var score : int
 
 func _physics_process(delta):
 	# Apply gravity when in the air
@@ -37,6 +39,11 @@ func _physics_process(delta):
 	if global_position.y < -5:
 		level_restart()
 	
+
+func add_score(amount):
+	score += amount
+	score_text.text = str("Score: ", score)
+#	score_text.text = ("Score: ") + str(score)
 
 
 func level_restart():

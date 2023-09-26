@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://6wkesjwnusfs"]
+[gd_scene load_steps=5 format=3 uid="uid://6wkesjwnusfs"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_pr1ry"]
 [ext_resource type="ArrayMesh" uid="uid://gjuyfsvj5gs0" path="res://Assets/Models/characterVampire.obj" id="2_ooksx"]
@@ -6,6 +6,13 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_d4u5u"]
 radius = 0.3
 height = 1.53394
+
+[sub_resource type="LabelSettings" id="LabelSettings_jqbuy"]
+font_size = 54
+outline_size = 3
+outline_color = Color(0.298039, 0.298039, 0.298039, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 1)
 
 [node name="Player" type="CharacterBody3D" groups=["Player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00279546, 0)
@@ -22,3 +29,11 @@ shape = SubResource("CapsuleShape3D_d4u5u")
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.921131, 0.389253, 0, -0.389253, 0.921131, 0, 2.87367, 3.38823)
 fov = 60.0
+
+[node name="ScoreText" type="Label" parent="."]
+offset_left = 26.0
+offset_top = 16.0
+offset_right = 150.0
+offset_bottom = 78.0
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_jqbuy")
